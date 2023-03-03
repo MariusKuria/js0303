@@ -1,0 +1,17 @@
+// 9. Parašyti funkciją pirminisSkaicius.Funkcija turi vieną kintamąjį.Turi būti patikrinimas,
+// kad kintamasis yra skaičius.Funkcija turi grąžinti ar pateiktas skaičius yra pirminis(pirminis
+// skaičius yra tas, kuris dalinasi tik iš savęs ir tik iš vieneto be liekanos.)(10 taškų)
+
+
+function pirminisNo(x) {
+    if (typeof x === 'number') {
+        for (i = 2; i < x; i++) {
+            if (x % i === 0) { return 'Ne pirminis' }
+            else if (i > Math.sqrt(x)) { return 'Pirminis' }
+        };
+    } else { return 'Not a number' }
+};
+console.log(pirminisNo(1));
+
+//Pirminis skaičius – bet kuris natūralusis skaičius, didesnis nei 1, kuris dalinasi tik iš savęs ir vieneto. 
+// Vienetas nelaikomas nei pirminiu skaičiumi, nei sudėtiniu.
